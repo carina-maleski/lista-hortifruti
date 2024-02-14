@@ -124,19 +124,41 @@
       <h2>Deixe sua sugestão! 🙏🏼</h2>
       <form>
         <label for="nome">Seu nome:</label>
-        <input type="text" id="nome" />
+        <input type="text" id="nome" onkeyup="validaNome()" />
+        <div id="txtNome"></div>
         <label for="email">Seu email:</label>
-        <input type="email" id="email" />
+        <input type="email" id="email" onkeyup="validaEmail()" />
+        <div id="txtEmail"></div>
         <label for="fruta">Fruta:</label>
-        <input type="text" id="fruta" />
+        <input type="text" id="fruta" onkeyup="validaFruta()" />
+        <div id="txtFruta"></div>
         <label for="preparo">Preparo:</label>
-        <textarea type="text" id="preparo"></textarea>
-        <button>Enviar</button>
+        <textarea type="text" id="preparo" onkeyup="validaPreparo()"></textarea>
+        <div id="txtPreparo"></div>
+        <button onclick="enviar()">Enviar</button>
       </form>
+
+      <div>
+        <p>Estrada serrinha do carmo, 589, São Roque - SP</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.9266231038587!2d-47.08990062278787!3d-23.606964378768467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf0baf63397f07%3A0x9540ee8a6c0b0cb8!2sFazenda%20Para%C3%ADso!5e0!3m2!1spt-BR!2sbr!4v1707927844470!5m2!1spt-BR!2sbr"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          onmousemove="mapaZoom()"
+          onmouseout="mapaNormal()"
+          id="mapa"
+        ></iframe>
+      </div>
     </section>
 
     <footer>
       <p>Aula de HTML/CSS</p>
     </footer>
+
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
